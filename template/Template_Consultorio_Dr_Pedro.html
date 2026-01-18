@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consultório Dr. Pedro Lucas</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; color: #0f172a; background: #f8fafc; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1.5rem;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://placehold.co/1920x1080');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(15,23,42,0.6), rgba(15,23,42,0.85));
+    z-index: -1;
+  }
+  .hero-content { max-width: 720px; }
+  .hero-logo { font-size: .9rem; letter-spacing: .1em; margin-bottom: 1rem; opacity: .85; }
+  .hero-title { font-size: clamp(2.2rem, 4vw + 1rem, 3.6rem); margin-bottom: 1rem; font-weight: 700; }
+  .hero-subtitle { opacity: .9; margin: 0 auto 1.6rem; max-width: 580px; }
+  .hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+
+  .btn-primary, .btn-secondary {
+    padding: .8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .95rem;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .btn-primary { background: #3b82f6; color: #fff; }
+  .btn-primary:hover { background: #2563eb; }
+  .btn-secondary {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(6px);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.3); }
+
+  /* SEÇÕES */
+  .section { max-width: 1080px; margin: 0 auto; padding: 4rem 1.5rem; }
+  .section-header { text-align: center; margin-bottom: 2rem; }
+  .section-header h2 { font-size: 1.9rem; margin-bottom: .5rem; }
+  .section-header p { color: #4b5563; }
+
+  .grid { display: grid; gap: 1.5rem; }
+  @media(min-width:768px){ .grid-3{grid-template-columns:repeat(3,1fr);} .grid-2{grid-template-columns:repeat(2,1fr);} }
+
+  .card{
+    background:#fff; padding:1.5rem; border-radius:1rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+    border:1px solid #e5e7eb;
+  }
+  .badge{ display:inline-block; padding:.3rem .7rem; background:#dbeafe; color:#1d4ed8; border-radius:999px; font-size:.75rem; margin-bottom:.8rem; }
+
+  footer { padding: 1.5rem; margin-top: 4rem; border-top: 1px solid #e5e7eb; text-align: center; font-size: .85rem; color:#6b7280; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-logo">Consultório Odontológico · Dr. Pedro Lucas</div>
+    <h1 class="hero-title">Sorriso saudável começa com cuidado profissional</h1>
+    <p class="hero-subtitle">Atendimento moderno, humanizado e focado em devolver sua confiança ao sorrir.</p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary">Agendar Avaliação</button>
+      <button class="btn-secondary">Ver Artigos</button>
+    </div>
+
+    <p class="hero-meta">Clareamento · Implantes · Ortodontia · Estética Dental</p>
+  </div>
+</header>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="section-header">
+    <h2>Sobre o Consultório</h2>
+    <p>Excelência, tecnologia e atendimento acolhedor.</p>
+  </div>
+
+  <div class="grid grid-3">
+    <article class="card">
+      <span class="badge">Atendimento</span>
+      <h3>Humanização</h3>
+      <p>Ambiente confortável e acolhedor para todos os pacientes.</p>
+    </article>
+
+    <article class="card">
+      <span class="badge">Tecnologia</span>
+      <h3>Equipamentos Modernos</h3>
+      <p>Tratamentos menos invasivos e resultados melhores.</p>
+    </article>
+
+    <article class="card">
+      <span class="badge">Resultados</span>
+      <h3>Estética e Saúde</h3>
+      <p>Cuidamos da função mastigatória e da estética do sorriso.</p>
+    </article>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section" id="blog">
+  <div class="section-header">
+    <h2>Artigos</h2>
+    <p>Dicas e conteúdos sobre saúde bucal.</p>
+  </div>
+
+  <div class="grid grid-2">
+    <article class="card">
+      <span class="badge">Clareamento</span>
+      <h3>Quando clarear os dentes?</h3>
+      <p>Entenda quando o procedimento é indicado.</p>
+    </article>
+
+    <article class="card">
+      <span class="badge">Ortodontia</span>
+      <h3>Aparelho fixo ou alinhadores?</h3>
+      <p>Compare as diferenças e descubra o ideal para você.</p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Consultório Dr. Pedro Lucas
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
