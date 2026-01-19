@@ -15,7 +15,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900/85 -z-[1]" />
 
             {/* Hero Content - Deslocado para baixo para não ficar sobre o peito */}
-            <div className="max-w-4xl mt-[500px] md:mt-[450px]">
+            <div className="max-w-4xl mt-[400px] md:mt-[450px] px-4">
                 <h1 className="text-[clamp(2.2rem,4vw+1rem,3.6rem)] mb-4 font-bold">
                     Cuidar do seu sorriso é devolver sua confiança ao mundo!
                 </h1>
