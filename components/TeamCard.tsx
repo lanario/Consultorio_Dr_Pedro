@@ -25,16 +25,16 @@ export function TeamCard({ name, imagePath, quote, instagramUrl = 'https://insta
                 </Link>
             </div>
 
-            {/* Bottom section - Photo */}
-            <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
-                <Image
-                    src={imagePath}
-                    alt={name}
-                    fill
-                    className="object-cover transition-transform duration-500 ease-out hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-            </div>
+      {/* Bottom section - Photo */}
+      <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden bg-slate-900">
+        <Image
+          src={imagePath}
+          alt={name}
+          fill
+          className="object-cover object-center transition-transform duration-500 ease-out hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
         </article>
     )
 }

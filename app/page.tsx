@@ -10,8 +10,8 @@ export default function Home() {
             <Hero />
 
             <Section
-                id="quem-sou"
-                title="Quem Sou"
+                id="quem-sou-eu"
+                title="Quem Sou Eu"
                 subtitle="Conheça o profissional por trás do seu sorriso."
                 dark={true}
             >
@@ -112,19 +112,19 @@ export default function Home() {
                     <TeamCard
                         name="Dr. Marcelle Albuquerque"
                         imagePath="/dr_marcelle.JPG"
-                        quote="Especialista em Implantodontia e reabilitação oral com foco em resultados estéticos e funcionais."
+                        quote="Especialista em endodontia, dedicada a tratamentos precisos e humanizados para preservar a saúde e a vitalidade dos dentes. Com expertise em procedimentos avançados, oferece atendimento cuidadoso e tecnologia de ponta."
                         instagramUrl="https://www.instagram.com/amarcellealbuquerque/"
                     />
                     <TeamCard
                         name="Dr. Wlysses Resende"
                         imagePath="/dr_ulysses.JPG"
-                        quote="Dedicado à excelência em tratamentos odontológicos, proporcionando o melhor cuidado para cada paciente."
+                        quote="Implantodontista com expertise em planejamento digital, cirurgia guiada e protocolos avançados. Atua na reabilitação oral através de implantes de alta performance e procedimentos minimamente invasivos."
                         instagramUrl="https://www.instagram.com/drwresende/"
                     />
                     <TeamCard
                         name="Dr. Gabi Batista"
                         imagePath="/dr_gabi.jpeg"
-                        quote="Comprometida com a saúde bucal e estética dental, sempre priorizando o conforto e bem-estar."
+                        quote="Ortodontista especializada em tratamentos com alinhadores, aparelhos estéticos e tecnologias digitais. Focada em proporcionar resultados previsíveis e uma experiência mais confortável ao paciente."
                         instagramUrl="https://www.instagram.com/dra.gabibatista/"
                     />
                 </div>

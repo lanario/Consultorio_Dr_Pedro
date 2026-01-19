@@ -47,12 +47,12 @@ export function Navbar() {
                     </div>
 
                     {/* Menu Desktop - oculto em mobile */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden md:flex items-center gap-4 lg:gap-6">
                         <Link
-                            href="#quem-sou"
-                            className="text-sm font-medium text-white/90 hover:text-white transition-colors"
+                            href="#quem-sou-eu"
+                            className="text-sm font-medium text-white/90 hover:text-white transition-colors whitespace-nowrap"
                         >
-                            QUEM SOU
+                            QUEM SOU EU
                         </Link>
                         <Link
                             href="#o-que-fazemos"
@@ -100,11 +100,11 @@ export function Navbar() {
             >
                 <div className="flex flex-col py-4 px-6 space-y-4">
                     <Link
-                        href="#quem-sou"
+                        href="#quem-sou-eu"
                         onClick={closeMenu}
                         className="text-white font-medium text-base py-2 hover:text-blue-400 transition-colors"
                     >
-                        QUEM SOU
+                        QUEM SOU EU
                     </Link>
                     <Link
                         href="#o-que-fazemos"
