@@ -116,7 +116,7 @@ export default function Home() {
                         instagramUrl="https://www.instagram.com/amarcellealbuquerque/"
                     />
                     <TeamCard
-                        name="Dr. Wlysses Resende"
+                        name="Dr. Wllysses Resende"
                         imagePath="/dr_ulysses.JPG"
                         quote="Implantodontista com expertise em planejamento digital, cirurgia guiada e protocolos avançados. Atua na reabilitação oral através de implantes de alta performance e procedimentos minimamente invasivos."
                         instagramUrl="https://www.instagram.com/drwresende/"
