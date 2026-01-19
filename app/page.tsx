@@ -110,7 +110,7 @@ export default function Home() {
             >
                 <div className="grid gap-6 md:grid-cols-3">
                     <TeamCard
-                        name="Dr. Marcelle"
+                        name="Dr. Marcelle Albuquerque"
                         imagePath="/dr_marcelle.JPG"
                         quote="Especialista em Implantodontia e reabilitação oral com foco em resultados estéticos e funcionais."
                         instagramUrl="https://www.instagram.com/amarcellealbuquerque/"
@@ -122,8 +122,8 @@ export default function Home() {
                         instagramUrl="https://www.instagram.com/drwresende/"
                     />
                     <TeamCard
-                        name="Dr. Gabriela"
-                        imagePath="/dr_gabriella.JPG"
+                        name="Dr. Gabi Batista"
+                        imagePath="/dr_gabi.jpeg"
                         quote="Comprometida com a saúde bucal e estética dental, sempre priorizando o conforto e bem-estar."
                         instagramUrl="https://www.instagram.com/dra.gabibatista/"
                     />
