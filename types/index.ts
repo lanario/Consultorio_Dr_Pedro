@@ -2,6 +2,9 @@ export interface CardProps {
   badge?: string;
   title: string;
   description: string;
+  dark?: boolean;
+  imagePath?: string;
+  imageAlt?: string;
 }
 
 export interface ButtonProps {

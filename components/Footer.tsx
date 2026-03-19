@@ -1,3 +1,5 @@
+import { Reveal } from '@/components/Reveal'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
   const address = "Rua Doutor Lassance Cunha, 158 - Jardim Tropical, Nova Iguaçu - RJ, 26010-145"
@@ -6,6 +8,7 @@ export function Footer() {
   
   return (
     <footer className="bg-slate-800 px-6 py-8">
+      <Reveal>
       <div className="max-w-7xl mx-auto">
         {/* Título e Endereço */}
         <div className="text-center mb-6">
@@ -50,6 +53,7 @@ export function Footer() {
           </p>
         </div>
       </div>
+      </Reveal>
     </footer>
   )
 }

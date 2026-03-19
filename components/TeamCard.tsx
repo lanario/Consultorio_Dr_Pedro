@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface TeamCardProps {
-    name: string;
-    imagePath: string;
-    quote: string;
-    instagramUrl?: string;
+export interface TeamCardProps {
+    name: string
+    imagePath: string
+    quote: string
+    instagramUrl?: string
 }
 
 export function TeamCard({ name, imagePath, quote, instagramUrl = 'https://instagram.com' }: TeamCardProps) {
@@ -26,12 +26,12 @@ export function TeamCard({ name, imagePath, quote, instagramUrl = 'https://insta
             </div>
 
       {/* Bottom section - Photo */}
-      <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden bg-slate-900">
+      <div className="relative h-[440px] md:h-[560px] w-full overflow-hidden bg-slate-900">
         <Image
           src={imagePath}
           alt={name}
           fill
-          className="object-cover object-center transition-transform duration-500 ease-out hover:scale-110"
+          className="object-cover object-[50%_12%] transition-transform duration-500 ease-out hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

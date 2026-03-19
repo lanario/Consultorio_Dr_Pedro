@@ -5,6 +5,8 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.5);
 }
 
 html {
@@ -15,5 +17,78 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: system-ui, sans-serif;
+}
+
+/* Aparição gradual no site todo */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger para filhos (ex: grid de cards) */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline (Process Flow): linha vertical + preenchimento + passo ativo */
+.timeline-step {
+  opacity: 0.35;
+  filter: blur(3px);
+  transform: scale(0.98);
+  transition:
+    opacity 0.6s ease-out,
+    filter 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: transform;
+}
+
+.timeline-step-active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.timeline-point {
+  box-shadow: 0 0 0 4px rgb(15 23 42), 0 0 0 5px rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-step-active .timeline-point {
+  background-color: var(--accent);
+  border-color: transparent;
+  box-shadow:
+    0 0 0 4px rgb(15 23 42),
+    0 0 0 5px rgba(59, 130, 246, 0.35),
+    0 0 24px var(--accent-glow);
+  transform: scale(1.15);
+}
+
+.timeline-step-active .timeline-card-visual {
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.2);
 }
 
