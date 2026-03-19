@@ -147,7 +147,7 @@ export function CollaboratorsStack({ cards }: { cards: TeamCardProps[] }) {
                             aria-hidden={!isActive}
                         >
                             <div
-                                className="w-full max-w-[720px] mx-auto transition-opacity duration-300 md:max-w-[820px]"
+                                className="w-full max-w-[360px] mx-auto transition-opacity duration-300 sm:max-w-[400px] md:max-w-[420px] lg:max-w-[420px]"
                                 style={{
                                     opacity: isMobile ? 1 : isActive ? 1 : 0.14,
                                     pointerEvents: isMobile || isActive ? 'auto' : 'none',

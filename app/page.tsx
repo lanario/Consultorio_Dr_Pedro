@@ -111,20 +111,12 @@ export default function Home() {
                         badge="Estética Dental"
                         title="Transformação Completa"
                         description="Trabalhamos com técnicas modernas para harmonizar seu sorriso. Cada caso é planejado com foco em estética, função e durabilidade."
-                        imageBefore="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&fit=crop"
-                        imageAfter="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&fit=crop"
-                        imageBeforeAlt="Antes do tratamento"
-                        imageAfterAlt="Depois do tratamento"
                         reverse={false}
                     />
                     <TrabalhoItem
                         badge="Implantes"
                         title="Reabilitação Oral"
                         description="Soluções completas para restauração e funcionalidade. Implantes de alta performance e procedimentos minimamente invasivos."
-                        imageBefore="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&fit=crop"
-                        imageAfter="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&fit=crop"
-                        imageBeforeAlt="Antes da reabilitação"
-                        imageAfterAlt="Resultado da reabilitação"
                         reverse={true}
                     />
                 </TimelineSection>
