@@ -28,15 +28,15 @@ export function Navbar() {
         <>
             <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/20 backdrop-blur-md' : 'bg-transparent'
                 }`}>
-                <div className="flex items-center justify-between h-16 px-4 md:px-6">
-                    {/* Logo - menor em mobile */}
-                    <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <div className="flex items-center justify-between py-2 md:py-3 px-4 md:px-6 min-h-14">
+                    {/* Logo - altura maior no mobile e no desktop */}
+                    <Link href="/" className="flex items-center hover:opacity-80 transition-opacity shrink-0">
                         <Image
                             src="/logo_pedro.png"
                             alt="Consultório odontológico Dr. Pedro Lucas"
-                            width={150}
-                            height={60}
-                            className="w-auto md:h-32 h-20"
+                            width={190}
+                            height={80}
+                            className="w-auto h-20 md:h-32 lg:h-36"
                             priority
                         />
                     </Link>
@@ -95,7 +95,7 @@ export function Navbar() {
 
             {/* Menu Mobile - aparece quando aberto */}
             <div
-                className={`fixed top-16 left-0 right-0 bg-slate-900/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+                className={`fixed top-32 left-0 right-0 bg-slate-900/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
                     }`}
             >
                 <div className="flex flex-col py-4 px-6 space-y-4">
